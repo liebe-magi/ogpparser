@@ -8,7 +8,7 @@ def ogpparser(url):
     response = requests.get(url)
     response.encoding = response.apparent_encoding
  
-    bs = BeautifulSoup(response.text, 'html.parser')
+    bs = BeautifulSoup(response.content, 'html.parser')
     
     result = {}
     for header in bs.find_all('head'):
