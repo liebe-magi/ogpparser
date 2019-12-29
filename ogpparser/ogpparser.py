@@ -17,7 +17,7 @@ def ogpparser(url):
             if meta.has_attr('property'):
                 if meta['property'][:3]=='og:':
                     tag = meta['property'].strip('og:')
-                    content = meta['content'].strip()
+                    content = meta['content'].strip().replace('\n', '')
                     if tag not in result.keys():
                         result[tag] = content
                     else:
@@ -29,7 +29,7 @@ def ogpparser(url):
             elif meta.has_attr('name'):
                 if meta['name'][:3]=='og:':
                     tag = meta['name'].strip('og:')
-                    content = meta['content'].strip()
+                    content = meta['content'].strip().replace('\n', '')
                     if tag not in result.keys():
                         result[tag] = content
                     else:

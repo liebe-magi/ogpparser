@@ -11,7 +11,7 @@ setup(
     name='ogpparser',
     packages=find_packages(),
 
-    version='1.0.3',
+    version='1.0.4',
 
     license='MIT',
 
